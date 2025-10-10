@@ -1,0 +1,24 @@
+# Procedures for valiation of total sea level with insitu tide gauge
+
+# MODEL AND INSITU DATA
+
+# Tide gauge files at high frequency are available in /insitu/ and were obtained from Emodnet (https://emodnet.ec.europa.eu/en/physics)
+
+# Longer time series were not available in the website and were obtained previously at the former AdriaClim with some partners, and are available in monthly basis under /insitu_monthly/
+
+# Model values of total sea level were computed using outputs of sea surface height with the addition of the thermosteric and halosteric components. These are available under /files/
+
+# VALIDATION OF TOTAL SEA LEVEL ANOMALY
+
+- Comparison between model and tide gauge sea level was performed in terms of anomaly
+- For the validation, analysis of trend was performed in monthly mean basis, while PDFs were performed in daily basis (except for Croatian stations).
+- For a more robust analysis of sea level trend, monthly seasonal cycle was computed and then subtracted to obtain the non-seasonal sea level anomaly. The metrics for the trend were computed using the Mann-Kendall test (Kendall, 1948; Mann, 1945)
+
+The analysis is then devided in 2, trend and PDF, and both scripts were duplicated to correspond to the tide gauge data obtained from emodnet for Italian stations, and from previous monthly files for Croatian stations (xxx_Croatia.py)
+
+1) compare_sea_level_TSsteric_anomaly_MKorig.py
+2) compare_sea_level_TSsteric_anomaly_MKorig_Croatia.py
+3) compare_sea_level_pdf.py
+4) compare_sea_level_pdf_Croatia.py 
+
+

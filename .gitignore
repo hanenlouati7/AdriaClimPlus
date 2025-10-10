@@ -1,0 +1,4 @@
+# Ignore large NetCDF files in Renata's folder
+*.nc
+
+

@@ -1,0 +1,33 @@
+# Heading for each station in the procedure:
+
+# OTRANTO
+station = 'OTRANTO'
+offset = -0.3  # (Offset ref in m)
+lon_tide_gauge = 18.4969
+lat_tide_gauge = 40.1464
+tide_correction = 1 # convert to m if necessary
+date_format = '%Y-%m-%dT%H:%M:%SZ' # '%Y-%m-%dT%H:%M:%SZ' # '%d-%m-%y'
+# File paths
+tide_gauge_file = f"insitu_monthly/SSH_{station}_MONTHLY.txt"
+
+# DUBROVINK
+station = 'DUBROVNIK'
+offset = -0.31  # (Offset ref in m)
+lon_tide_gauge = 18.067
+lat_tide_gauge = 42.656
+tide_correction = 0.001 # convert to m if necessary
+date_format = '%d-%m-%y' # '%Y-%m-%dT%H:%M:%SZ' # '%d-%m-%y'
+# File paths
+tide_gauge_file = f"insitu_monthly/processed/SSH_{station}_MONTHLY.txt"
+
+# TRIESTE
+station = 'TRIESTE_MOLO_SARTORIO'
+offset = -0.39  # (Offset ref in m)
+lon_tide_gauge = 13.7561
+lat_tide_gauge = 45.6544
+tide_correction = 1 # convert to m if necessary
+date_format = '%Y-%m-%dT%H:%M:%SZ' # '%Y-%m-%dT%H:%M:%SZ' # '%d-%m-%y'
+# File paths
+tide_gauge_file = f"insitu_monthly/processed/SSH_{station}_MONTHLY.txt"
+
+

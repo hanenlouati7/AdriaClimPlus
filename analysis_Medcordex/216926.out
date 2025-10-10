@@ -1,0 +1,57 @@
+Sender: LSF System <lsfadmin@n002-ibj>
+Subject: Job 216926: <sea_level> in cluster <juno> Done
+
+Job <sea_level> was submitted from host <login1-ibj> by user <re35220> in cluster <juno> at Fri Mar 28 14:52:47 2025
+Job was executed on host(s) <n002-ibj>, in queue <s_medium>, as user <re35220> in cluster <juno> at Fri Mar 28 19:12:13 2025
+</users_home/cmcc/re35220> was used as the home directory.
+</work/cmcc/re35220/AdriaClimPlus/analysis/EvalRun/TSL> was used as the working directory.
+Started at Fri Mar 28 19:12:13 2025
+Terminated at Fri Mar 28 19:17:17 2025
+Results reported at Fri Mar 28 19:17:17 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q s_medium
+#BSUB -P 0566
+#BSUB -n 1
+#BSUB -J sea_level
+#BSUB -o %J.out
+#BSUB -e %J.err
+#BSUB -R "rusage[mem=40G]"
+
+source activate myconda
+
+python3 compare_sea_level_TSsteric_anomaly_MKorig.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   80.18 sec.
+    Max Memory :                                 30293 MB
+    Average Memory :                             12747.09 MB
+    Total Requested Memory :                     40960.00 MB
+    Delta Memory :                               10667.00 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                13
+    Run time :                                   309 sec.
+    Turnaround time :                            15870 sec.
+
+The output (if any) follows:
+
+Station =  OT15
+MK model (deseasonalized) = Mann_Kendall_Test(trend='decreasing', h=True, p=0.0009464439969366634, z=-3.30598131238078, Tau=-0.19226091763405195, s=-1739.0, var_s=276375.0, slope=-0.0003676060726638253, intercept=0.022743889499494456)
+MK tide_gauge (deseasonalized) = Mann_Kendall_Test(trend='no trend', h=False, p=0.9031055331029221, z=0.12173924280343494, Tau=0.007186290768380321, s=65.0, var_s=276375.0, slope=1.807133501778293e-05, intercept=-0.0028914319915548685)
+BIAS =  2.4671622769447924e-16
+
+
+PS:
+
+Read file <216926.err> for stderr output of this job.
+
