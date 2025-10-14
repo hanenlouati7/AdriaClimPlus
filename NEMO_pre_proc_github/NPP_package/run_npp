@@ -1,0 +1,1 @@
+bsub -q s_long -P 0566 -R "rusage[mem=2G]" -o run.%J.out python npp_create_surface_forcing_ECMWF_WRF.py

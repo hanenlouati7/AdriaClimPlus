@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf title="aggregation example" xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2"> 
+  <variable name="vozocrtx" orgName="uo" />
+  <variable name="vomecrty" orgName="vo" />
+  <variable name="votemper" orgName="thetao" />
+  <variable name="vosaline" orgName="so" />
+  <variable name="sossheig" orgName="zos" />
+  <variable name="time_counter" orgName="time">
+  </variable>
+  <aggregation type="union" >
+     <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+        <aggregation type="joinExisting" dimName="time" >
+	   <netcdf location="../bc_outputs_reanalysis/OUT_T.nc.ini" />
+	   <netcdf location="../bc_outputs_reanalysis/OUT_T.nc.end" />
+        </aggregation>
+     </netcdf>
+     <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+        <aggregation type="joinExisting" dimName="time" >
+           <netcdf location="../bc_outputs_reanalysis/OUT_S.nc.ini" />
+           <netcdf location="../bc_outputs_reanalysis/OUT_S.nc.end" />
+        </aggregation>
+     </netcdf>
+     <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+        <aggregation type="joinExisting" dimName="time" >
+            <netcdf location="../bc_outputs_reanalysis/OUT_SSH.nc.ini" />
+            <netcdf location="../bc_outputs_reanalysis/OUT_SSH.nc.end" />
+        </aggregation>
+     </netcdf>	 
+     <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+        <aggregation type="joinExisting" dimName="time" >
+           <netcdf location="../bc_outputs_reanalysis/OUT_VEL.nc.ini" />
+           <netcdf location="../bc_outputs_reanalysis/OUT_VEL.nc.end" />
+        </aggregation>
+     </netcdf>	 
+  </aggregation>
+</netcdf>

@@ -1,0 +1,8 @@
+cdo griddes UVEL_1990_Daily.nc > mygrid
+
+gridtype  = lonlat
+
+xfirst    = -11.33374
+xinc      = 0.1
+yfirst    = 30.3063
+yinc      = 0.001

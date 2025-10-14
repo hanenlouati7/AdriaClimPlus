@@ -1,0 +1,21 @@
+NEMO Pre-Processing Routine Package (NEMO_pre_proc.zip)
+
+The NEMO_pre_proc.zip package is a collection of routines designed to create all the necessary files to run the NEMO ocean model (excluding river files, which will be added in the future).
+
+This package not only includes the required routines for generating these files but also contains essential static reference files. This explains the relatively large size of the folder, even when compressed.
+
+The package is entirely written in Python and is easily adaptable to different cases, as has already been done for various models (e.g., reanalyses, MedCordex, etc.), which can be observed in the different routines.
+
+Structure and Usage
+The package follows a three-script structure for each file type to be created (Bathymetry, Initial Conditions, Boundary Conditions, and Surface Forcing).
+Each file type has a main script, which internally calls two supporting scripts:
+
+1- npp_inputparams.py - Contains all the necessary basic information to generate the files, such as the paths to the original input files.
+2- npp_tools.py - Includes all the general subroutines used in the file creation process (reading, writing, interpolation, etc.).
+
+However, the npp_tools.py script is not used for boundary condition files, as they rely on the pyBDY package instead (https://github.com/NOC-MSM/pyBDY), which must be installed in the user's environment.
+
+Final Considerations
+Although this package has been designed to be as general and flexible as possible, its usage and implementation may not be immediately straightforward. However, I am confident that it will serve as a solid foundation for setting up a new NEMO ocean model configuration.
+
+For any questions or suggestions, please feel free to contact me at vladimir.santosdacosta@cmcc.it.

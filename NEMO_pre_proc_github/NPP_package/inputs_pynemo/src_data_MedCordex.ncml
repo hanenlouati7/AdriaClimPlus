@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf title="aggregation example" xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2"> 
+  <variable name="vozocrtx" orgName="UVEL" />
+  <variable name="vomecrty" orgName="VVEL" />
+  <variable name="votemper" orgName="THETA" />
+  <variable name="vosaline" orgName="SALT" />
+  <variable name="sossheig" orgName="ETAN" />
+  <variable name="time_counter" orgName="time">
+  </variable>
+  <aggregation type="union" >
+     <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+        <aggregation type="joinExisting" dimName="time" >
+	   <netcdf location="/work/cmcc/vs15521/NEMO_pre_proc/NPP_package/bc_outputs_MedCordex_ENEA/OUT_T.nc.ini" />
+	   <netcdf location="/work/cmcc/vs15521/NEMO_pre_proc/NPP_package/bc_outputs_MedCordex_ENEA/OUT_T.nc.end" />
+        </aggregation>
+     </netcdf>
+     <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+        <aggregation type="joinExisting" dimName="time" >
+           <netcdf location="/work/cmcc/vs15521/NEMO_pre_proc/NPP_package/bc_outputs_MedCordex_ENEA/OUT_S.nc.ini" />
+           <netcdf location="/work/cmcc/vs15521/NEMO_pre_proc/NPP_package/bc_outputs_MedCordex_ENEA/OUT_S.nc.end" />
+        </aggregation>
+     </netcdf>
+     <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+        <aggregation type="joinExisting" dimName="time" >
+            <netcdf location="/work/cmcc/vs15521/NEMO_pre_proc/NPP_package/bc_outputs_MedCordex_ENEA/OUT_SSH.nc.ini" />
+            <netcdf location="/work/cmcc/vs15521/NEMO_pre_proc/NPP_package/bc_outputs_MedCordex_ENEA/OUT_SSH.nc.end" />
+        </aggregation>
+     </netcdf>	 
+     <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+        <aggregation type="joinExisting" dimName="time" >
+           <netcdf location="/work/cmcc/vs15521/NEMO_pre_proc/NPP_package/bc_outputs_MedCordex_ENEA/OUT_VELU.nc.ini" />
+           <netcdf location="/work/cmcc/vs15521/NEMO_pre_proc/NPP_package/bc_outputs_MedCordex_ENEA/OUT_VELU.nc.end" />
+        </aggregation>
+     </netcdf>
+     <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+        <aggregation type="joinExisting" dimName="time" >
+           <netcdf location="/work/cmcc/vs15521/NEMO_pre_proc/NPP_package/bc_outputs_MedCordex_ENEA/OUT_VELV.nc.ini" />
+           <netcdf location="/work/cmcc/vs15521/NEMO_pre_proc/NPP_package/bc_outputs_MedCordex_ENEA/OUT_VELV.nc.end" />
+        </aggregation>
+     </netcdf>
+  </aggregation>
+</netcdf>

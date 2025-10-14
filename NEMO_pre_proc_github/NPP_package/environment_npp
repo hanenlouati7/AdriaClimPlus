@@ -1,0 +1,39 @@
+#/bin/bash
+
+conda activate pybdy
+
+module purge
+module load anaconda/3-2022.10
+module load intel-2021.6.0/ncl/6.6.2-p2sqo
+module load intel-2021.6.0/nco/5.0.6-jp6y4
+module load intel-2021.6.0/ncurses/6.3-vkhgo
+module load intel-2021.6.0/ncview/2.1.8-sds5t
+module load intel-2021.6.0/netcdf-c-threadsafe/4.9.0-25h5k
+module load intel-2021.6.0/netcdf-c/4.9.0-cjqig
+module load intel-2021.6.0/netcdf-cxx-threadsafe/4.2-vew5y
+module load intel-2021.6.0/netcdf-cxx/4.2-7prit
+module load intel-2021.6.0/netcdf-fortran-threadsafe/4.6.0-2dmem
+module load intel-2021.6.0/netcdf-fortran/4.6.0-5vpiq
+module load intel-2021.6.0/cdo-threadsafe/2.1.1-lyjsw
+
+module load intel-2021.6.0/cmake/3.25.1-7wfsx
+module load oneapi-2022.1.0/compiler-rt/2022.1.0
+module load intel-2021.6.0/2021.6.0
+module load impi-2021.6.0/2021.6.0
+module load intel-2021.6.0/impi-2021.6.0/hdf5/1.13.3-76cip
+module load intel-2021.6.0/impi-2021.6.0/netcdf-c/4.9.0-qbuoy
+module load intel-2021.6.0/impi-2021.6.0/netcdf-fortran/4.6.0-gohn7
+module load intel-2021.6.0/impi-2021.6.0/parallel-netcdf/1.12.3-eshb5
+module load intel-2021.6.0/perl/5.36.0-jj4hw
+module load intel-2021.6.0/perl-uri/1.72-6at2i
+
+module load intel-2021.6.0/impi-2021.6.0/xios/2.5-36kwn
+
+export JAVA_HOME=/work/cmcc/vs15521/java/jdk-11.0.0.1
+
+# set linker path to 64-bit libraries
+export LD_LIBRARY_PATH="/lib64/":$LD_LIBRARY_PATH
+
+export PYTHONWARNINGS="ignore"
+
+printf "\033[33;44;1m NETCDF NPP modules \033[0m \n"

@@ -1,0 +1,1 @@
+bsub -q s_long -P 0566 -R "rusage[mem=90G]" -o run.%J.out medcordex_regrid.sh

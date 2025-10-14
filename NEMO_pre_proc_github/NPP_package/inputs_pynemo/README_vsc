@@ -1,0 +1,22 @@
+conda env remove -n pybdy
+
+export PYBDY_DIR=/work/cmcc/vs15521/pyBDY
+cd $PYBDY_DIR
+
+conda clean --all
+
+module load anaconda/3.9
+pip cache purge
+
+conda env create -n pybdy -f environment.yml python=3.9
+conda activate pybdy
+
+##export JAVA_HOME=/work/cmcc/vs15521/java/jdk-11.0.0.1
+
+pip install -e .
+pip install cftime==1.4.1
+pip install seawater
+
+cd /work/opa/vs15521/NEMO_pre_proc/NPP_package
+source environment_npp
+

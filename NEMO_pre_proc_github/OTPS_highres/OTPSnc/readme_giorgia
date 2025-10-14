@@ -1,0 +1,31 @@
+##This code is the OTPS Mediterranean regional code with 1/30º resolution
+
+
+
+%%%%%%%%%%List of files%%%%%%%%%%%%%%%%%%%
+1.time_file
+2.latlon_file
+3.final_setup.inp
+4.predict_tide #the executable file by compilation
+
+%%%%%%%%%List of commands%%%%%%%%%%%%%%%%%%%%%
+
+#compile to get the executable predict_tide
+##makefile has been edited and customized for zeus machine
+##to compile just type: $make
+
+$python create_lltime.py #generate "latlontime_file"
+
+edit latlontime_file and remove lat and lon columns
+
+rename the file as time_file
+
+create latlon_file to be called by final_setup.inp
+
+$vi final_setup.inp  #note taht Model_Med has 1/30º res
+
+###$bsub -I predict_tide -tlatlontime_file < final_setup.inp
+$bsub -I predict_tide -ttime_file < final_setup.inp
+
+Notes:
+use "oce" in final_setup.inp

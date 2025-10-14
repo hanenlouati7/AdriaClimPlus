@@ -1,0 +1,11 @@
+ncks -v nav_lat,nav_lon,bathy_metry domain_cfg_agrif_father.nc depth_ADRb.020_03s_notime_agrif_father1.nc
+ncwa -a time_counter depth_ADRb.020_03s_notime_agrif_father1.nc depth_ADRb.020_03s_notime_agrif_father.nc
+ncrename -h -O -v bathy_metry,Bathymetry depth_ADRb.020_03s_notime_agrif_father.nc
+rm -f depth_ADRb.020_03s_notime_agrif_father1.nc
+
+ncks -v e1f,e1t,e1u,e1v,e1f,e2f,e2t,e2u,e2v,glamf,glamt,glamu,glamv,gphif,gphit,gphiu,gphiv,nav_lat,nav_lon,nav_lev,time_counter mask_agrif_father.nc mesh_hgr_agrif_father.nc
+ 
+ncks -v e3t_0,e3t_1d,e3u_0,e3v_0,e3w_0,e3w_1d,gdept_0,gdept_1d,gdepw_0,gdepw_1d,mbathy,nav_lat,nav_lev,nav_lon,time_counter mask_agrif_father.nc mesh_zgr_agrif_father.nc
+ 
+ncrename -v e3t_0,e3t -v e3u_0,e3u -v e3v_0,e3v -v e3w_0,e3w -v e3t_1d,e3t_0 -v e3w_1d,e3w_0 -v gdept_0,gdept -v gdept_1d,gdept_0 -v gdepw_0,gdepw -v gdepw_1d,gdepw_0 mesh_zgr_agrif_father.nc
+

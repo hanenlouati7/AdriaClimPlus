@@ -1,0 +1,24 @@
+ARCH = $(shell uname -s)
+ifeq ($(ARCH),SunOS)
+ FC = f90
+ NCLIB = /home/server/local/lib.solaris2x
+ NCINCLUDE = /usr/local/include
+endif
+ifeq ($(ARCH),Linux)
+ FC = gfortran #pgf90
+ FC = mpiifort
+ #NCLIB = /usr/local/netcdf4/lib
+ NCLIB = /users/home/opt/netcdf/netcdf-4.3/lib
+ #NCLIB = /users/home/opt-intel_2015.3.187/netcdf/netcdf-C_4.3.3.1-F_4.4.2_C++_4.2.1/lib
+ #NCINCLUDE = /usr/local/include
+ NCINCLUDE = /users/home/opt/netcdf/netcdf-4.3/include
+ #NCINCLUDE = /users/home/opt-intel_2015.3.187/netcdf/netcdf-C_4.3.3.1-F_4.4.2_C++_4.2.1/include
+ NCLIBS= -lnetcdf -lnetcdff
+endif
+
+predict_tide: predict_tide.f subs.f constit.h
+	$(FC) -o predict_tide predict_tide.f subs.f -L$(NCLIB) $(NCLIBS) -I$(NCINCLUDE) 
+	#rm *.o
+extract_HC:  extract_HC.f subs.f
+	$(FC) -o  extract_HC extract_HC.f subs.f -L$(NCLIB) $(NCLIBS) -I$(NCINCLUDE)
+	#rm *.o
