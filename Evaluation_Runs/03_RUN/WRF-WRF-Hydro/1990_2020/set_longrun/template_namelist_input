@@ -1,0 +1,187 @@
+ &time_control
+ run_days                            = 30,
+ run_hours                           = 0,
+ run_minutes                         = 0,
+ run_seconds                         = 0,
+ start_year                          = STARTYEAR, 
+ start_month                         = STARTMONTH,  
+ start_day                           = STARTDAY,   
+ start_hour                          = 00, 
+ start_minute                        = 00,
+ start_second                        = 00,
+ end_year                            = ENDYEAR,
+ end_month                           = ENDMONTH,
+ end_day                             = ENDDAY,
+ end_hour                            = 00,
+ end_minute                          = 00,
+ end_second                          = 00,
+ interval_seconds                    = 21600
+ input_from_file                     = .true.,
+ history_interval                    = 360,
+ !history_outname= '/work/cmcc/wrf_cmcc-dev/giorgia/WRF-release_3-5-1/run/2013_1day_test_merc_6km/wrfout_d<domain>_<date>',
+ frames_per_outfile                  = 4,
+ restart                             = .RESTARTTF.,
+ restart_interval                    = 43200,
+ write_hist_at_0h_rst                = .true.,
+! nocolons                            = .true.
+ io_form_history                     = 2,
+ io_form_restart                     = 2,
+ io_form_input                       = 2,
+ io_form_boundary                    = 2,
+ !debug_level                         = 0,
+ !io_form_auxinput2 = 2
+ output_diagnostics      = 1      
+ auxhist3_outname        = 'wrfxtrm_d<domain>_<date>',
+ io_form_auxhist3        = 2,
+ auxhist3_interval       = 1440,
+ frames_per_auxhist3     = 1,
+ auxinput4_inname = "wrflowinp_d<domain>",
+ auxinput4_interval = 360,
+ io_form_auxinput4 = 2,
+ iofields_filename = "output_variables.txt",
+ ignore_iofields_warning=.false.,
+/
+
+ &domains
+ time_step                           = 30,
+ time_step_fract_num                 = 0,
+ time_step_fract_den                 = 1,
+ max_dom                             = 1,
+ e_we                                = 289, 
+ e_sn                                = 403,
+ e_vert                              = 44,
+ p_top_requested                     = 5000,
+ num_metgrid_levels                  = 38,
+ num_metgrid_soil_levels             = 4,
+ dx                                  = 6000,
+ dy                                  = 6000,
+ grid_id                             = 1,
+ parent_id                           = 0,
+ i_parent_start                      = 1,
+ j_parent_start                      = 1,
+ parent_grid_ratio                   = 1, 
+ parent_time_step_ratio              = 1,
+ feedback                            = 1,
+ smooth_option                       = 0,
+ dzstretch_s			     = 1.1, 
+
+! eta_levels                        = 1.000, 0.9973, 0.9947, 0.9921, 0.9895,
+!                                    0.9869, 0.9843, 0.9816, 0.979, 0.97645,
+!                                    0.9739, 0.9687, 0.9635, 0.956, 0.9485,
+!                                    0.9389, 0.9294, 0.9182, 0.907, 0.8944,
+!                                    0.8818, 0.8543, 0.825, 0.7945, 0.763,
+!                                    0.7311, 0.699, 0.6669, 0.6352, 0.604,
+!                                    0.5735, 0.5437, 0.5148, 0.4869, 0.4599,
+!                                    0.4339, 0.4089, 0.3848, 0.3617, 0.3394,
+!                                    0.3179, 0.2972, 0.2772, 0.2578, 0.239,
+!                                    0.2207, 0.2028, 0.1854, 0.1682, 0.1514,
+!                                    0.1323, 0.1159, 0.0999, 0.0843, 0.069,
+!                                    0.0542, 0.0397, 0.0257, 0.0122, 0.000,
+
+!dzbot                               = 20,
+
+/
+
+ &physics
+ !physics_suite                       = 'CONUS'
+ mp_physics                          = 10, !10 Morrison, Thompson 8
+ cu_physics                          = 2, !6 Tiedke, Kain-Fritsch 1
+ ra_lw_physics                       = 4,
+ ra_sw_physics                       = 4,
+!giorgia RRTMG:start
+ cam_abs_freq_s                      = 21600,
+ levsiz                              = 59,
+ paerlev                             = 29,
+ cam_abs_dim1                        = 4,
+ cam_abs_dim2                        = 44,
+ o3input                             = 2,
+ aer_opt                             = 1,
+ alevsiz                             = 12,
+ no_src_types                        = 6,
+!giorgia RRTMG:end
+ bl_pbl_physics                      = 1,  !1=YSU, 2=Mellor-Yamada-Janjic
+ sf_sfclay_physics                   = 1,  ! 1= Revised MONIN-NOBUKOV 91=OLD MONIN,2=Monin-Obukhov-Janjic Eta
+ sf_surface_physics                  = 4, !NoahMP =4 Noah = 2
+ topo_wind			     = 2, 
+ radt                                = 10, 
+ bldt                                = 0, 
+ cudt                                = 0, 
+ isfflx                              = 1,
+ ifsnow                              = 1,
+ icloud                              = 1,
+ surface_input_source                = 1,
+ num_soil_layers                     = 4,
+ num_land_cat                        = 24,
+ sf_urban_physics                    = 0, 
+ sst_update                          = 1,
+ sst_skin			     = 1,
+ !tmn_update			     = 1, !to be tested
+ !lagday		             = 150, !to be tested
+ bucket_mm                           = 100, !new
+ bucket_J 			     = 1.e9, !new
+ shalwater_z0			     = 1,
+ shalwater_depth		     = 100,
+ rdlai2d                             = .true.,
+
+ /
+
+&noah_mp
+dveg                      = 7,
+opt_crs                   = 1,
+opt_sfc                   = 1,
+opt_btr                   = 1,
+opt_run                   = 3,
+opt_frz                   = 1,
+opt_inf                   = 1,
+opt_rad                   = 3,
+opt_alb                   = 1,
+opt_snf                   = 3,
+opt_tbot                  = 2,
+opt_stc                   = 1,
+opt_gla                   = 1,
+opt_soil                  = 1,
+opt_irr                   = 0,
+opt_tdrn                  = 0,
+opt_crop                  = 0,
+opt_rsf                   = 1,
+/
+
+
+ &fdda
+ /
+
+ &dynamics
+ !hybrid_opt                          = 0, 
+ w_damping                           = 0,
+ diff_opt                            = 1, 
+ km_opt                              = 4, 
+ diff_6th_opt                        = 2, 
+ diff_6th_factor                     = 0.12,
+ base_temp                           = 290.,
+ damp_opt                            = 0,
+ zdamp                               = 5000., 
+ dampcoef                            = 0.2,  
+ khdif                               = 0,   
+ kvdif                               = 0,  
+ non_hydrostatic                     = .true., 
+ moist_adv_opt                       = 1,  
+ scalar_adv_opt                      = 1,  
+ !gwd_opt                             = 1,  
+ /
+
+ &bdy_control
+ spec_bdy_width                      = 5,
+ spec_zone                           = 1,
+ relax_zone                          = 4,
+ specified                           = .true.,
+! spec_exp                            = 0.33, !to be tested
+ nested                              = .false.,
+ /
+
+ &grib2
+ /
+
+ &namelist_quilt
+ nio_tasks_per_group = 0,
+ nio_groups = 1,
+ /

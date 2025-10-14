@@ -1,0 +1,6 @@
+lrwxrwxrwx 1 vr25423 goco   99 May 14  2024 Vtable -> /users_home/cmcc/vr25423/source/WRFV4.4.1_JUNO/WPS-4.4/ungrib/Variable_Tables/Vtable.ECMWF_modified
+lrwxrwxrwx 1 vr25423 goco   68 May 14  2024 link_grib.csh -> /users_home/cmcc/vr25423/source/WRFV4.4.1_JUNO/WPS-4.4/link_grib.csh
+lrwxrwxrwx 1 vr25423 goco   76 May 14  2024 ungrib.exe -> /users_home/cmcc/vr25423/source/WRFV4.4.1_JUNO/WPS-4.4/ungrib/src/ungrib.exe
+lrwxrwxrwx 1 vr25423 goco   74 May 15  2024 METGRID.TBL -> /users_home/cmcc/vr25423/source/WRFV4.4.1_JUNO/WPS-4.4/metgrid/METGRID.TBL
+-rwxr-xr-x 1 vr25423 goco 1.7K May 16  2024 namelist.wps
+lrwxrwxrwx 1 vr25423 goco   78 May 16  2024 metgrid.exe -> /users_home/cmcc/vr25423/source/WRFV4.4.1_JUNO/WPS-4.4/metgrid/src/metgrid.exe
