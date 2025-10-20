@@ -1,0 +1,15 @@
+Post-processing of WRF Model Output Files to be CF Compliance and ERDDAP compatible:
+
+1- For this process, two files located in the directory /work/cmcc/vs15521/AdriaClimPlus/postproc4ERDDAP/WRF will be used:
+   - run_rewrite_WRF_to_CF_final.sh
+   - wrfout_to_cf_final.ncl
+
+2- run_rewrite_WRF_to_CF_final.sh
+   - This script performs a temporal loop to generate post-processed files, calling the .ncl script at each time step (in this case, daily).
+   - Before invoking the .ncl script, the routine creates longitude and latitude files in the format required by ERDDAP, which will be incorporated into the final post-processed files (for this, a sample WRF output file must be specified as a reference).
+   - The script also defines the years that will be processed in the loop to generate the files. If the required folders for storing the post-processed files do not exist, they will be created following the WRF_YYYY structure.
+
+3- wrfout_to_cf_final.ncl
+   - This script is based on the one used in the AdriaClim project, with minor modifications.
+   - It selects specific variables from the original WRF output file by setting True or False for each variable at the beginning of the script. Additionally, it allows for the creation of diagnostic variables, which are not originally present in the WRF output but can be derived indirectly.
+   - In the AdriaClimPlus project, it was decided not to generate any diagnostic variables, except for total precipitation (out2dMet@precip_tot), which is calculated using the variables that are also saved: RAINC + RAINNC + (100*I_RAINC) + (100*I_RAINNC).

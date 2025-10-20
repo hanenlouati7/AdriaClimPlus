@@ -1,0 +1,20 @@
+### WRFHydro4ERDDAP
+
+#split EvalRun runoff at nearest monitoring point to the river mouth per year and per river
+#description under info/
+$bsub < split_flowrate_EvalRun.sh
+
+#save all the other WRFHydro output files as "raw" files
+#/work/cmcc/vr25423/Project/AdriaClimPlus/evaluation_run_30yrs_ERA5/WRF-WRF-Hydro/1990_2020/run/EXP
+
+1) {year}${month}${day}0000.CHANOBS_DOMAIN1: WRFHydro river streamflow timeseries (1d) for each of the 145 modeled rivers at the pixes representing the monitoring points closest to the rievr mouths (raw data)
+
+2) {year}${month}${day}0000.CHRTOUT_DOMAIN1: WRFHydro river streamflow timeseries (1d) for each of the 145 modeled rivers at all the pixels representing the river networks (raw data)
+
+3) {year}${month}${day}0000.LSMOUT_DOMAIN1: WRFHydro Land Surface sub-model soil layer fields (raw data)
+
+4) {year}${month}${day}0000.GWOUT_DOMAIN1:  aquifer bucket inflow/outflow/depth (raw data)
+
+5) {year}${month}${day}0000.CHRTOUT_GRID1: WRFHydro river streamflow values (2d) at all the pixels representing the river networks (raw data)
+
+

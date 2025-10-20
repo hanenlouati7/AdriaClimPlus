@@ -1,0 +1,18 @@
+Post-processing of NEMO Model Output Files to be CF Compliance and ERDDAP compatible:
+
+1- For this process, 5 files located in the directory /work/cmcc/vs15521/AdriaClimPlus/postproc4ERDDAP/NEMO will be used:
+   - create_lonlat.sh
+   - create_NEMO_daily_files.py
+   - create_NEMO_3hs_files.py
+   - change_netcdf_attributes_daily.sh 
+   - change_netcdf_attributes_3h.sh  
+
+2- create_lonlat.sh
+   - This script creates longitude and latitude files in the format required by ERDDAP, which will be incorporated into the final post-processed files (for this, a sample NEMO output file must be specified as a reference).
+
+3- create_NEMO_daily_files.py
+   - This script splits the NEMO output files, which are stored in chunks, into daily files. The year range for this process can be defined within the script. It also calls the bash script change_netcdf_attributes_daily.sh, which is responsible for creating the necessary file attributes to ensure they contain all required metadata for availability on ERDDAP. If the project or file type changes, this bash script must be modified accordingly.
+
+4- create_NEMO_3hs_files.py
+   - This script performs the same function as the daily file script but for 3-hourly output files (which were set as the frequency for saving 2D fields). It splits the NEMO output files, originally stored in chunks, into 3-hourly files. The year range for this process can be defined within the script. It also calls the bash script change_netcdf_attributes_3h.sh, which ensures that the necessary attributes are created so the files contain all required metadata for availability on ERDDAP. If the project or file type changes, this bash script must also be modified.
+
