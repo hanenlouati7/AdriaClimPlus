@@ -5,7 +5,7 @@
 ---
 
 ## 📖 Overview
-The Adriatic Sea — a semi-enclosed basin of the Mediterranean Sea — is characterized by complex oceanographic dynamics and strong air–sea interactions. Its shallow northern sector, high riverine input, and marked seasonal variability make it particularly vulnerable to climate change.
+The Adriatic Sea  a semi-enclosed basin of the Mediterranean Sea — is characterized by complex oceanographic dynamics and strong air–sea interactions. Its shallow northern sector, high riverine input, and marked seasonal variability make it particularly vulnerable to climate change.
 
 This repository documents the **sub-regional climate downscaling** activities carried out over the Adriatic Sea within the *AdriaClimPlus* project. The objective is to generate **high-resolution climate information** that enhances understanding of future oceanographic and atmospheric changes in this sensitive basin.
 
