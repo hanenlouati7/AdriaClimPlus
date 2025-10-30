@@ -60,6 +60,7 @@ AdriaClimPlusRepo/
 ├── analysis/      # Evaluation and post-processing tools
 ├── figures/       # Plots, maps, and diagrams
 └── README.md      # Project documentation (this file)
+└── .gitignore     # extensions that are removed from repository 
 ```
 
 ---
