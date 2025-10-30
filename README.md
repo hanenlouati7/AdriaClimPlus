@@ -57,8 +57,6 @@ AdriaClimPlusRepo/
 ├── ocean/         # Ocean pre/post-processing scripts (NEMO)
 ├── atmosphere/    # Atmospheric forcing scripts (WRF)
 ├── hydrology/     # WRF-Hydro input/output management
-├── analysis/      # Evaluation and post-processing tools
-├── figures/       # Plots, maps, and diagrams
 └── README.md      # Project documentation (this file)
 └── .gitignore     # extensions that are removed from repository 
 ```
