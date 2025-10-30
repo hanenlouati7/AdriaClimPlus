@@ -19,11 +19,14 @@ This repository documents the **sub-regional climate downscaling** activities ca
   - 2 m air temperature  
   - Precipitation  
   - SST, SSS, SSH, total sea level, and circulation patterns  
-- Evaluate the **impacts of river discharges** during the projection period  
+- Evaluate the **impacts of river discharges** during the projection period
+- Simulations cover:
+  - **Historical:** 1985–2014  
+  - **Projection:** 2021–2050 (SSP5–8.5)
+- Compare and highlight **expected climate trends and variability** within the Adriatic system  
 
 ---
-
-## 🧩 Methodology
+## 🧩 Models
 Downscaling integrates **dynamical models**:
 
 | Model | Version | Domain | Resolution |
@@ -31,20 +34,34 @@ Downscaling integrates **dynamical models**:
 | NEMO | 4.2 | Ocean circulation | ~2 km |
 | WRF | 4.4.1 | Atmosphere | ~6 km |
 | WRF-Hydro | 3.7 | Hydrology | ~600 m |
+> The scripts and workflows included in this repository have also been used in the **AdriaClim** project — the initiative that preceded *AdriaClimPlus* — ensuring **methodological continuity, reproducibility, and consistency** across both projects.
 
-Simulations cover:
-- **Historical:** 1985 – 2014  
-- **Projection:** 2021 – 2050 (SSP5-8.5)
-
-Comparisons highlight expected **climate trends and variability** within the Adriatic system.
 
 ---
 
-## 👥 Users
+## 👥 Developers / Maintainers
 
 - 👍 **Giorgia Verri** [✉️](mailto:giorgia.verri@cmcc.it) 
 - 👍 **Alessandro De Lorenzis** [✉️](mailto:alessandro.delorenzis@cmcc.it) 
 - 👍 **Renata Eidt** [✉️](mailto:renata.eidt@cmcc.it) 
 - 👍 **Veeramanikandan Ramadoss** [✉️](mailto:veeramanikandan.ramadoss@cmcc.it) 
-- 👍 **Vladimir Santos da Costa** [✉️](mailto:vladimir.santosdacosta@cmcc.it) 
+- 👍 **Vladimir Santos da Costa** [✉️](mailto:vladimir.santosdacosta@cmcc.it)
+- 👍(M) **Fabio Viola** — [✉️](mailto:fabio.viola@cmcc.it)  
+- 👍(M) **Hanen Louati** — [✉️](mailto:hanen.louati@cmcc.it)
+  
+## 📁 Repository Structure
+AdriaClimPlusRepo/
+│
+├── ocean/ # Ocean pre/post-processing scripts (NEMO)
+├── atmosphere/ # Atmospheric forcing scripts (WRF)
+├── hydrology/ # WRF-Hydro input/output management
+├── analysis/ # Evaluation and post-processing tools
+├── figures/ # Plots, maps, and diagrams
+└── README.md # Project documentation (this file)
 ---
+
+
+## 📜 License
+This repository is intended for collaborative research within the AdriaClimPlus framework.  
+Re-use and redistribution are allowed under CMCC collaboration agreements.
+
