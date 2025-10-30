@@ -50,15 +50,15 @@ Downscaling integrates **dynamical models**:
 - 👍(M) **Hanen Louati** — [✉️](mailto:hanen.louati@cmcc.it)
   
 ## 📁 Repository Structure
+
 AdriaClimPlusRepo/
 │
-├── ocean/ # Ocean pre/post-processing scripts (NEMO)
-├── atmosphere/ # Atmospheric forcing scripts (WRF)
-├── hydrology/ # WRF-Hydro input/output management
-├── analysis/ # Evaluation and post-processing tools
-├── figures/ # Plots, maps, and diagrams
-└── README.md # Project documentation (this file)
-
+├── ocean/         # Ocean pre/post-processing scripts (NEMO)
+├── atmosphere/    # Atmospheric forcing scripts (WRF)
+├── hydrology/     # WRF-Hydro input/output management
+├── analysis/      # Evaluation and post-processing tools
+├── figures/       # Plots, maps, and diagrams
+└── README.md      # Project documentation (this file)
 
 ---
 
