@@ -46,8 +46,8 @@ Downscaling integrates **dynamical models**:
 - 👍 (MD) **Renata Eidt** [✉️](mailto:renata.eidt@cmcc.it) 
 - 👍 (MD) **Veeramanikandan Ramadoss** [✉️](mailto:veeramanikandan.ramadoss@cmcc.it) 
 - 👍 (MD) **Vladimir Santos da Costa** [✉️](mailto:vladimir.santosdacosta@cmcc.it)
-- 👍 (M) **Fabio Viola** — [✉️](mailto:fabio.viola@cmcc.it)  
-- 👍 (M) **Hanen Louati** — [✉️](mailto:hanen.louati@cmcc.it)
+- 👍 (M) **Fabio Viola** [✉️](mailto:fabio.viola@cmcc.it)  
+- 👍 (M) **Hanen Louati** [✉️](mailto:hanen.louati@cmcc.it)
   
 ## 📁 Repository Structure
 
