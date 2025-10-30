@@ -41,17 +41,18 @@ Downscaling integrates **dynamical models**:
 
 ## 👥 Developers / Maintainers
 
-- 👍 **Giorgia Verri** [✉️](mailto:giorgia.verri@cmcc.it) 
-- 👍 **Alessandro De Lorenzis** [✉️](mailto:alessandro.delorenzis@cmcc.it) 
-- 👍 **Renata Eidt** [✉️](mailto:renata.eidt@cmcc.it) 
-- 👍 **Veeramanikandan Ramadoss** [✉️](mailto:veeramanikandan.ramadoss@cmcc.it) 
-- 👍 **Vladimir Santos da Costa** [✉️](mailto:vladimir.santosdacosta@cmcc.it)
-- 👍(M) **Fabio Viola** — [✉️](mailto:fabio.viola@cmcc.it)  
-- 👍(M) **Hanen Louati** — [✉️](mailto:hanen.louati@cmcc.it)
+- 👍 (MD) **Giorgia Verri** [✉️](mailto:giorgia.verri@cmcc.it) 
+- 👍 (MD) **Alessandro De Lorenzis** [✉️](mailto:alessandro.delorenzis@cmcc.it) 
+- 👍 (MD) **Renata Eidt** [✉️](mailto:renata.eidt@cmcc.it) 
+- 👍 (MD) **Veeramanikandan Ramadoss** [✉️](mailto:veeramanikandan.ramadoss@cmcc.it) 
+- 👍 (MD) **Vladimir Santos da Costa** [✉️](mailto:vladimir.santosdacosta@cmcc.it)
+- 👍 (M) **Fabio Viola** — [✉️](mailto:fabio.viola@cmcc.it)  
+- 👍 (M) **Hanen Louati** — [✉️](mailto:hanen.louati@cmcc.it)
   
 ## 📁 Repository Structure
 
 AdriaClimPlusRepo/
+```
 │
 ├── ocean/         # Ocean pre/post-processing scripts (NEMO)
 ├── atmosphere/    # Atmospheric forcing scripts (WRF)
@@ -59,6 +60,7 @@ AdriaClimPlusRepo/
 ├── analysis/      # Evaluation and post-processing tools
 ├── figures/       # Plots, maps, and diagrams
 └── README.md      # Project documentation (this file)
+```
 
 ---
 
