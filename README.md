@@ -34,7 +34,7 @@ Downscaling integrates **dynamical models**:
 | NEMO | 4.2 | Ocean circulation | ~2 km |
 | WRF | 4.4.1 | Atmosphere | ~6 km |
 | WRF-Hydro | 3.7 | Hydrology | ~600 m |
-> The scripts and workflows included in this repository have also been used in the **AdriaClim** project — the initiative that preceded *AdriaClimPlus* — ensuring **methodological continuity, reproducibility, and consistency** across both projects.
+> The scripts and workflows included in this repository have also been used in the **AdriaClim** project, the initiative that preceded *AdriaClimPlus*, ensuring **methodological continuity, reproducibility, and consistency** across both projects.
 
 
 ---
