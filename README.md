@@ -57,7 +57,7 @@ AdriaClimPlusRepo/
 ├── ocean/         
 ├── atmosphere/    
 ├── hydrology/     
-└── README.md      # Project documentation (this file)
+└── README.md      
 └── .gitignore     # extensions that are removed from repository 
 ```
 
