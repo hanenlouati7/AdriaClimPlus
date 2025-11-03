@@ -54,7 +54,7 @@ Downscaling integrates **dynamical models**:
 AdriaClimPlusRepo/
 ```
 │
-├── ocean/         # Ocean pre/post-processing scripts (NEMO)
+├── ocean/         
 ├── atmosphere/    
 ├── hydrology/     
 └── README.md      # Project documentation (this file)
